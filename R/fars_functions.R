@@ -105,7 +105,7 @@ fars_summarize_years <- function(years) {
 #' @seealso [fars_read()]
 #'
 #' @examples
-#' \dontrun{fars_map_state(4124,  2015)}
+#' \dontrun{fars_map_state(2,  2015)}
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
         data <- fars_read(filename)
