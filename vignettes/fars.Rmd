@@ -29,6 +29,7 @@ library(tidyr)
 library(readr)
 library(maps)
 library(graphics)
+library(qpdf)
 ```
 
 The accident data has specific filenames, instead of using console or copying those manually, we can use `make_filename` to give us the correct username based on the year
