@@ -1,0 +1,59 @@
+---
+title: "fars"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fars)
+```
+
+# fars
+Fars is simple package from coursera course "Mastering Software Development in R".
+Its main goal is to simplify US accident data analysis, I, Ibrahim, will walk through the function to show what it can do
+
+
+```{r eval=FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(maps)
+library(graphics)
+```
+
+The accident data has specific filenames, instead of using console or copying those manually, we can use `make_filename` to give us the correct username based on the year
+```{r eval=FALSE}
+fname <- make_filename(2015)
+```
+After that, we can use `fars_read` to load the data into tibble data frame.
+```{r eval=FALSE}
+df <- fars_read(fname)
+head(df)
+```
+Now you're done! If you want to do your own analysis for one specific year, this is the end and now you can do what you want to do.
+
+But this package has more than that! We can grab data from several years, add year column to it. This let you analyze several years data at once
+```{r eval=FALSE}
+df <- fars_read_years(c(2013, 2014))
+head(df)
+```
+Now, if you want get a glance of the data based on year before dive down, we have simplify the process and give you summarised version of it.
+
+```{r eval=FALSE}
+df <- fars_summarize_years(c(2013, 2014, 2015))
+head(df)
+```
+Last but not least, we have function to plot the accident into US map. You need to use correct state number for it to work (note: I don't know US state number since I'm not from US, so excuse my bad example)
+```{r eval=FALSE}
+fars_map_state(1,  2015)
+```
