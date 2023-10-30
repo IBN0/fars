@@ -20,7 +20,7 @@ Will throw out error if the state number is invalid
 Will return NULL in case there is no accident data in a given state
 }
 \examples{
-\dontrun{fars_map_state(4124,  2015)}
+\dontrun{fars_map_state(2,  2015)}
 }
 \seealso{
 \code{\link[=fars_read]{fars_read()}}

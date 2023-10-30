@@ -2,6 +2,8 @@
 # fars
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/IBN0/fars/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IBN0/fars/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/IBN0/fars/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/IBN0/fars/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 This is dummy package for Building R Packages course from coursera
